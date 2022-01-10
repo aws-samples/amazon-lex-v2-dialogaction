@@ -1,0 +1,9 @@
+{
+    "name": "lex-validate-lambda",
+    "dependencies": {
+        "aws-appsync": "^2.0.0",
+        "graphql-tag": "^2.10.1",
+        "i18next": "21.6.5",
+        "isomorphic-fetch": "^2.2.1"
+    }
+}
