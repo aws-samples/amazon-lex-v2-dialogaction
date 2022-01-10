@@ -19,22 +19,26 @@ Amplify : Install and configure the Amplify CLI (refer : https://docs.amplify.aw
 ### Import Bot
 
 (AWS console) Amazon Lex -> Bots -> Action -> Import :
-Bot name : LexDialogAction-Bot
-Input file : Resource/BlogBot-3-YTZOBUF72Q-LexJson.zip
-IAM permissions : Create a role with basic Amazon Lex permissions
-COPPA : No
+
+    Bot name : LexDialogAction-Bot
+    Input file : Resource/BlogBot-3-YTZOBUF72Q-LexJson.zip
+    IAM permissions : Create a role with basic Amazon Lex permissions
+    COPPA : No
 
 ### Build Bot
 
 (AWS console) Lex -> Bots -> LexDialogAction-Bot -> Draft Version -> All languages -> Language: English (US) : Build
+
 Lex -> Bots -> LexDialogAction-Bot -> Draft Version -> All languages -> Language: Korean (KR) : Build
 
 ### Create Version
 
 (AWS console) Lex -> Bots -> LexDialogAction-Bot -> Versions -> Create version : Create
+
 Lex -> Bots -> LexDialogAction-Bot -> Aliases > Create alias : Create
-Alias name : prod
-Associate with a version : Version 1
+
+    Alias name : prod
+    Associate with a version : Version 1
 
 ## AWS Appsync & Amazon DynamoDB
 
@@ -146,12 +150,14 @@ for CDK
 ## Lex & Lambda Integration
 
 (AWS console) Lex -> Bots -> LexDialogAction-Bot -> Aliases -> prod -> Languages -> English -> Lambda function :
-Source : lex-validate-lambda
-Lambda function version or alias : $LATEST
+
+    Source : lex-validate-lambda
+    Lambda function version or alias : $LATEST
 
 (AWS console) Lex -> Bots -> LexDialogAction-Bot -> Aliases -> prod -> Languages -> Korean -> Lambda function :
-Source : lex-validate-lambda
-Lambda function version or alias : $LATEST
+
+    Source : lex-validate-lambda
+    Lambda function version or alias : $LATEST
 
 ## Test
 
